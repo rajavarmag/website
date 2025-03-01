@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .logout-btn {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 20px;
+        }
+        .logout-btn:hover {
+            transform: scale(1.05);
+        }
+        .contact-box {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            text-align: left;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .contact-box h3 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .contact-box p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="logout-btn" onclick="logout()">🔓 Logout</button>
+    </div>
+    <div class="welcome-section">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>Your Name</h2>
+        <a href="https://drive.google.com/file/d/YOUR_RESUME_LINK/view" target="_blank" class="resume-btn">📄 Download Resume</a>
+    </div>
+    <div class="contact-box">
+        <h3>Contact Information</h3>
+        <p><strong>Name:</strong> Your Name</p>
+        <p><strong>Number:</strong> +123 456 7890</p>
+        <p><strong>Address:</strong> Your Address Here</p>
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p><strong>Website:</strong> <a href="#" target="_blank">www.yourwebsite.com</a></p>
+    </div>
+    <script>
+        function logout() {
+            sessionStorage.removeItem("loggedInUser");
+            window.location.href = "exit.html";
+        }
+    </script>
+</body>
+</html>
